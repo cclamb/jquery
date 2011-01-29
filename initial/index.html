@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+	<style type="text/css">
+		a.test {
+			font-weight: bold;
+		}
+	</style>
+	
+    <script type="text/javascript" src="../js/jquery.js"></script>
+
+    <script type="text/javascript">
+
+		function add_classes() {
+			$('a').addClass('test');
+		}
+		
+		function change_links() {
+			$('a').click(function(evt) {
+				alert('thanks for coming big duder!!');
+				evt.preventDefault();
+				$(this).hide('slow');
+			});
+		}
+		
+		function alert_callback() {
+			alert('check me out mon frere!');
+		}
+		
+		function add_callback() {
+			$.get('js/jquery.js', alert_callback)
+		}
+
+      	$(document).ready(function() {
+				change_links();
+				add_classes();
+				add_callback();
+		});
+    </script>
+  </head>
+  <body>
+    <a href="http://jquery.com/">jQuery</a>
+	<a href="http://cnn.com/">Flappamungilishous</a>
+  </body>
+</html>
